@@ -51,25 +51,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessibleTracker.cs" />
-    <Compile Include="AlternativeTracker.cs" />
-    <Compile Include="CompletableTracker.cs" />
-    <Compile Include="Exception\ExtensionException.cs" />
-    <Compile Include="Exception\ExtensionException\KeyExtensionException.cs" />
-    <Compile Include="Exception\ExtensionException\ValueExtensionException.cs" />
-    <Compile Include="Exception\TraceException.cs" />
-    <Compile Include="Exception\TrackerException.cs" />
-    <Compile Include="Exception\XApiException.cs" />
-    <Compile Include="Exception\XApiException\ActorXApiException.cs" />
-    <Compile Include="Exception\XApiException\ExtensionXApiException.cs" />
-    <Compile Include="Exception\XApiException\TargetXApiException.cs" />
-    <Compile Include="Exception\XApiException\VerbXApiException.cs" />
-    <Compile Include="GameObjectTracker.cs" />
+    <Compile Include="csharp-tracker\Interfaces\AccessibleTracker.cs" />
+    <Compile Include="csharp-tracker\Interfaces\AlternativeTracker.cs" />
+    <Compile Include="csharp-tracker\Interfaces\CompletableTracker.cs" />
+    <Compile Include="csharp-tracker\Exception\ExtensionException.cs" />
+    <Compile Include="csharp-tracker\Exception\ExtensionException\KeyExtensionException.cs" />
+    <Compile Include="csharp-tracker\Exception\ExtensionException\ValueExtensionException.cs" />
+    <Compile Include="csharp-tracker\Exception\TraceException.cs" />
+    <Compile Include="csharp-tracker\Exception\TrackerException.cs" />
+    <Compile Include="csharp-tracker\Exception\XApiException.cs" />
+    <Compile Include="csharp-tracker\Exception\XApiException\ActorXApiException.cs" />
+    <Compile Include="csharp-tracker\Exception\XApiException\ExtensionXApiException.cs" />
+    <Compile Include="csharp-tracker\Exception\XApiException\TargetXApiException.cs" />
+    <Compile Include="csharp-tracker\Exception\XApiException\VerbXApiException.cs" />
+    <Compile Include="csharp-tracker\Interfaces\GameObjectTracker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimpleJSON.cs" />
-    <Compile Include="TrackerAsset.cs" />
-    <Compile Include="TrackerAssetSettings.cs" />
-    <Compile Include="Utils\TrackerAssetUtils.cs" />
+    <Compile Include="csharp-tracker\SimpleJSON.cs" />
+    <Compile Include="csharp-tracker\TrackerAsset.cs" />
+    <Compile Include="csharp-tracker\TrackerAssetSettings.cs" />
+    <Compile Include="csharp-tracker\ConcurrentQueue.cs" />
+    <Compile Include="csharp-tracker\Utils\TrackerAssetUtils.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -94,7 +95,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\AssetManager\RageAssetManager\RageAssetManager.csproj">
+    <ProjectReference Include="..\AssetManager\RageAssetManager\RageAssetManager.csproj">
       <Project>{da8e9056-2e52-4029-81eb-a2d167614c47}</Project>
       <Name>RageAssetManager</Name>
     </ProjectReference>

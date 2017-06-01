@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAsset", "TrackerAsset\TrackerAsset.csproj", "{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RageAssetManager", "AssetManager\RageAssetManager\RageAssetManager.csproj", "{DA8E9056-2E52-4029-81EB-A2D167614C47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAssetTestApp", "TrackerAssetTestApp\TrackerAssetTestApp.csproj", "{67D42645-D4B5-4562-BB4B-8B97BF44F6FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAssetUnitTests", "TrackerAssetUnitTests\TrackerAssetUnitTests.csproj", "{7487B192-6A32-4F3D-8A61-269B5E359D31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAsset - Portable", "TrackerAsset_Portable\TrackerAsset - Portable.csproj", "{74335490-A1A3-406E-BC78-647AC58465CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8E9056-2E52-4029-81EB-A2D167614C47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8E9056-2E52-4029-81EB-A2D167614C47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8E9056-2E52-4029-81EB-A2D167614C47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8E9056-2E52-4029-81EB-A2D167614C47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D42645-D4B5-4562-BB4B-8B97BF44F6FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D42645-D4B5-4562-BB4B-8B97BF44F6FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D42645-D4B5-4562-BB4B-8B97BF44F6FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D42645-D4B5-4562-BB4B-8B97BF44F6FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7487B192-6A32-4F3D-8A61-269B5E359D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7487B192-6A32-4F3D-8A61-269B5E359D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7487B192-6A32-4F3D-8A61-269B5E359D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7487B192-6A32-4F3D-8A61-269B5E359D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74335490-A1A3-406E-BC78-647AC58465CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74335490-A1A3-406E-BC78-647AC58465CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74335490-A1A3-406E-BC78-647AC58465CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74335490-A1A3-406E-BC78-647AC58465CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

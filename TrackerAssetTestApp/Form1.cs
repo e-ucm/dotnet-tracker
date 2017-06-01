@@ -170,13 +170,13 @@ namespace TrackerAssetTestApp
 
         private void AccesibleAccessed_Click(object sender, EventArgs e)
         {
-            TrackerAsset.Instance.Accesible.Accessed(AccesibleId.Text, (AccessibleTracker.Accessible)AccesibleType.SelectedValue);
+            TrackerAsset.Instance.Accessible.Accessed(AccesibleId.Text, (AccessibleTracker.Accessible)AccesibleType.SelectedValue);
             UpdateTrackerAndConsole();
         }
 
         private void AccesibleSkipped_Click(object sender, EventArgs e)
         {
-            TrackerAsset.Instance.Accesible.Skipped(AccesibleId.Text, (AccessibleTracker.Accessible)AccesibleType.SelectedValue);
+            TrackerAsset.Instance.Accessible.Skipped(AccesibleId.Text, (AccessibleTracker.Accessible)AccesibleType.SelectedValue);
             UpdateTrackerAndConsole();
         }
 
