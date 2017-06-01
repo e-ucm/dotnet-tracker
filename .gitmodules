@@ -1,3 +1,6 @@
+[submodule "AssetManager"]
+	path = AssetManager
+	url = https://github.com/rageappliedgame/AssetManager.git
 [submodule "TrackerAsset/csharp-tracker"]
 	path = TrackerAsset/csharp-tracker
-	url = https://github.com/e-ucm/csharp-tracker
+	url = https://github.com/e-ucm/csharp-tracker.git
