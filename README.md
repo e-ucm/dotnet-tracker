@@ -30,15 +30,41 @@ After a game is developed, a common need is to know how the players play, what i
 
 Using the tracker is a really simple proccess. For expanding the Installation guide here you can found some examples of how to setup and use the tracker.
 
-### Tracker Instatiation
+### Tracker access and instatiation
 
-First, you need to create and manage an instance.
+First, you need to create and manage an instance. You have two ways for doing this.
+1. TrackerAsset has an singleton instance if you want to use it.
+1. Or either you can create your own instance via `new TrackerAsset()`.
 
 ```c#
+// You can use Tracker via Singleton:
+TrackerAsset.Instance.Settings = new TrackerAssetSettings();
+TrackerASset.Instance.Bridge = new Bridge();
+TrackerAsset.Instance.Start ();
+
+TrackerAsset.Instance.Alternative.Selected("AlternativeID", "SelectedAnswer");
+TrackerAsset.Instance.Flush();
+
+//You can create your own Tracker instance and manage it yourself.
+TrackerAsset player2tracker = new TrackerAsset();
+player2tracker.Settings = new TrackerAssetSettings();
+player2tracker.Bridge = new Bridge();
+player2tracker.Start ();
+
+player2tracker.Alternative.Selected("AlternativeID", "SelectedAnswer2");
+player2tracker.Flush();
+```
+
+### Tracker configuration
+
+As previously explained in installation, tracker needs to be configured. There are some specific parameters that are needed to set up as Host and TrackingCode, and the rest of them are optional.
+
+```c#
+String domain = "https://rage.e-ucm.es/";
 
 TrackerAssetSettings tracker_settings = new TrackerAssetSettings()
 {
-  Host = "https://rage.e-ucm.es/",
+  Host = domain,
   TrackingCode = "OBTAINED_FROM_SERVER",
   BasePath = "/api",
   Port = 334,
@@ -47,6 +73,46 @@ TrackerAssetSettings tracker_settings = new TrackerAssetSettings()
   TraceFormat = TrackerAsset.TraceFormats.xapi,
   BackupStorage = true
 };
+
+TrackerAsset.Instance.Settings = tracker_settings
+```
+
+### Bridge Implementation
+
+As in the rest of the assets of the RAGE projects, communication is made using a repository of interfaces called Bridge. This Bridge implements interfaces for managing the File System, or for sending Web Requests, and it's made this way to provide a platform independant system. If you want your tracker to be able to connect to the Analytics server, you have to use or implement a bridge for your platform that implements the interface `IWebServiceRequest`, for being able to make Logs implement `ILog`, and for accessing File System use `IDataStorage`. For more information see https://github.com/rageappliedgame/AssetManager
+
+Once you have a Bridge, you just need to add it to the Tracker.
+
+```c#
+//Setting the Bridge into the Tracker
+TrackerAsset.Instance.Bridge = new Bridge();
+```
+
+### Tracker Login and Start
+
+Tracker Login and Start are the only two methods that are used syncronously to the server, so make sure don't do it while something important happens into the game, because probably is going to freeze, for a really small amount of time, but is going to freeze.
+
+#### Tracker Login
+
+Tracker Login is not really necesary. If you are a developer, and you're logged into the Analytics server as a developer, you're going to receive traces either the player has logged or not. If you're a teacher, and you want to see traces in your activities, you can configure the activity to allow anonymous users.
+
+If you are a teacher and you want to use logged students, you have to add the students to the class and then ask them for credentials into your game and log them into the system using `TrackerAsset.Instance.Login(String username, String password)` function.
+
+```c#
+//Log in the student BEFORE starting the tracker
+String username = "student", password = "123456";
+
+TrackerAsset.Instance.Login(username, password);
+```
+
+### Tracker Start
+
+For requesting the actor to the server you have to start the tracker. This way actor is appended to the traces when generated. For starting the tracker you just have to call the `TrackerAsset.Instance.Start()` function.
+
+```c#
+//Start the tracker before sending traces.
+
+TrackerAsset.Instance.Start();
 ```
 
 ## Detailed Feature List
@@ -92,18 +158,18 @@ Usage example for the tracking of an in-game quest. We decided to use a [Complet
 
 	// Completable
 	// Initialized
-	Tracker.T.completable.Initialized("MyGameQuestId", Completable.Quest);
+	TrackerAsset.Instance.Completable.Initialized("MyGameQuestId", Completable.Quest);
 	
 	//...
 	
 	// Progressed
-	Tracker.T.completable.Progressed("MyGameQuestId", Completable.Quest, 0.8);
+	TrackerAsset.Instance.Completable.Progressed("MyGameQuestId", Completable.Quest, 0.8);
 	
 	//...
 	
 	// Progressed
 	bool success = true;
-	Tracker.T.completable.Completed("MyGameQuestId", Completed, success);
+	TrackerAsset.Instance.Completable.Completed("MyGameQuestId", Completed, success);
 
 ```
 
