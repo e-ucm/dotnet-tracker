@@ -13,7 +13,6 @@ namespace TrackerAssetTestApp
 {
     public partial class Form1 : Form
     {
-        TrackerAsset tracker;
         TrackerAssetSettings settings;
 
         public Form1()
@@ -79,7 +78,7 @@ namespace TrackerAssetTestApp
 
             TrackerAsset.Verb verb;
             Enum.TryParse<TrackerAsset.Verb>(TraceVerb.SelectedValue.ToString(), out verb);
-            TrackerAsset.TrackerEvent trace = new TrackerAsset.TrackerEvent()
+            TrackerAsset.TrackerEvent trace = new TrackerAsset.TrackerEvent(TrackerAsset.Instance)
             {
 
                 Target = new TrackerAsset.TrackerEvent.TraceObject(TraceObjectType.SelectedValue.ToString().ToLower(), TraceObjectId.Text),

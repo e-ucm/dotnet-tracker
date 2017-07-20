@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAsset", "TrackerAsset\TrackerAsset.csproj", "{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAsset", "csharp-tracker\TrackerAsset\TrackerAsset.csproj", "{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RageAssetManager", "AssetManager\RageAssetManager\RageAssetManager.csproj", "{DA8E9056-2E52-4029-81EB-A2D167614C47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RageAssetManager", "csharp-tracker\AssetManager\RageAssetManager\RageAssetManager.csproj", "{DA8E9056-2E52-4029-81EB-A2D167614C47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAssetTestApp", "TrackerAssetTestApp\TrackerAssetTestApp.csproj", "{67D42645-D4B5-4562-BB4B-8B97BF44F6FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAssetUnitTests", "TrackerAssetUnitTests\TrackerAssetUnitTests.csproj", "{7487B192-6A32-4F3D-8A61-269B5E359D31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAssetUnitTests", "csharp-tracker\TrackerAssetUnitTests\TrackerAssetUnitTests.csproj", "{7487B192-6A32-4F3D-8A61-269B5E359D31}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrackerAsset - Portable", "TrackerAsset_Portable\TrackerAsset - Portable.csproj", "{74335490-A1A3-406E-BC78-647AC58465CE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DA8E9056-2E52-4029-81EB-A2D167614C47} = {DA8E9056-2E52-4029-81EB-A2D167614C47}
+		{616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE} = {616FD8CE-87E2-4CEF-8A64-0995EDF3D9CE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

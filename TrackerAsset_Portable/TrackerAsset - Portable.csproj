@@ -36,70 +36,73 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\ExtensionException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\ExtensionException.cs">
       <Link>ExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\TraceException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\TraceException.cs">
       <Link>TraceException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\TrackerException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\TrackerException.cs">
       <Link>TrackerException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\XApiException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\XApiException.cs">
       <Link>XApiException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\ExtensionException\KeyExtensionException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\ExtensionException\KeyExtensionException.cs">
       <Link>KeyExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\ExtensionException\ValueExtensionException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\ExtensionException\ValueExtensionException.cs">
       <Link>ValueExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\XApiException\ActorXApiException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\XApiException\ActorXApiException.cs">
       <Link>ValueExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\XApiException\ExtensionXApiException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\XApiException\ExtensionXApiException.cs">
       <Link>ValueExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\XApiException\TargetXApiException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\XApiException\TargetXApiException.cs">
       <Link>ValueExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Exception\XApiException\VerbXApiException.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Exception\XApiException\VerbXApiException.cs">
       <Link>ValueExtensionException.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Utils\TrackerAssetUtils.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Utils\TrackerAssetUtils.cs">
       <Link>TrackerAssetUtils.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Interfaces\AccessibleTracker.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Interfaces\AccessibleTracker.cs">
       <Link>AccessibleTracker.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Interfaces\AlternativeTracker.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Interfaces\AlternativeTracker.cs">
       <Link>AlternativeTracker.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Interfaces\CompletableTracker.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Interfaces\CompletableTracker.cs">
       <Link>CompletableTracker.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\Interfaces\GameObjectTracker.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\Interfaces\GameObjectTracker.cs">
       <Link>GameObjectTracker.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\SimpleJSON.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\ConcurrentQueue.cs">
+      <Link>ConcurrentQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\csharp-tracker\TrackerAsset\SimpleJSON.cs">
       <Link>SimpleJSON.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\TrackerAsset.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\TrackerAsset.cs">
       <Link>TrackerAsset.cs</Link>
     </Compile>
-    <Compile Include="..\TrackerAsset\csharp-tracker\TrackerAssetSettings.cs">
+    <Compile Include="..\csharp-tracker\TrackerAsset\TrackerAssetSettings.cs">
       <Link>TrackerAssetSettings.cs</Link>
-    </Compile>
-    <Compile Include="..\TrackerAsset\Properties\AssemblyInfo.cs">
-      <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="RageAssetManager">
-      <HintPath>..\..\AssetManager\RageAssetManager\bin\Debug\RageAssetManager.dll</HintPath>
+      <HintPath>..\csharp-tracker\AssetManager\RageAssetManager\bin\Debug\RageAssetManager.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -87,11 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="TrackerAsset">
-      <HintPath>..\TrackerAsset\bin\Debug\TrackerAsset.dll</HintPath>
+      <HintPath>..\csharp-tracker\TrackerAsset\bin\Debug\TrackerAsset.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\AssetManager\RageAssetManager\RageAssetManager.csproj">
+    <ProjectReference Include="..\csharp-tracker\AssetManager\RageAssetManager\RageAssetManager.csproj">
       <Project>{da8e9056-2e52-4029-81eb-a2d167614c47}</Project>
       <Name>RageAssetManager</Name>
     </ProjectReference>
